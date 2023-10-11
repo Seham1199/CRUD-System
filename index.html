@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+
+    
+
+
+<div class="container  py-5 bg-ligt shadow w-50 my-5 rounded">
+    <h1 class="text-center py-3">CRUD SYSTEM</h1>
+    
+
+    <div class="mb-3">
+        <label for="productName">Product Name:</label>
+        <input type="text" class="form-control mt-2 " id="productName"/>
+    </div>
+    <!-- Alert For Product Name -->
+    <div class="alert  alert-danger d-none" role="alert">
+        <strong>please start with capital letter...</strong>
+      </div>
+
+    <div class="mb-3">
+        <label for="productCategory">Product Category:</label>
+        <input type="text" class="form-control  mt-2" id="productCategory"/>
+    </div>
+
+
+    <div class="mb-3">
+        <label for="productPrice">Product Price:</label>
+        <input type="text" class="form-control  mt-2" id="productPrice"/>
+    </div>
+ <!-- Alert For Product Price -->
+    <div class="alert myAlert alert-danger d-none" role="alert">
+        <strong>please the correct Price...</strong>
+      </div>
+
+    <div class="mb-3">
+        <label for="productDesc">Product Desc:</label>
+        <textarea type="text" class="form-control  mt-2" id="productDesc"></textarea>
+    </div>
+
+    <div class="alert  my-5 alert-danger d-none" role="alert" id="lastAlert">
+        <strong>please enter all fields...</strong>
+      </div>
+
+    
+
+    <button onclick="addProduct()" class="btn btn-outline-info mt-2" id="updateBtn">Add Product</button>
+</div>
+
+<div class="w-50 m-auto  my-5">
+    <input onkeyup="searchProduct(this.value)" type="text" placeholder="Search..." class="form-control w-75 m-auto "/>
+</div>
+
+
+
+<table class=" table  w-75 m-auto my-5 shadow text-center ">
+    <thead>
+        <th>Index</th>
+        <th>ProductName</th>
+        <th>ProductPrice</th>
+        <th>ProductCategory</th>
+        <th>ProductDesc</th>
+        <th>Update</th>
+        <th>Delete</th>
+    </thead>
+    <tbody id="tableBody" >
+        <tr>
+       
+    </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
